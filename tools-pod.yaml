@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tools-pod
+spec:
+  containers:
+  - name: tools-pod
+    image: quay.io/szobair/tools-pod:v2
+    imagePullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: '1'
+        memory: 100Mi
+      limits:
+        cpu: '1'
+        memory: 100Mi
+  #      
+  #nodeSelector:
+  #  kubernetes.io/hostname: "infra1"
